@@ -1,0 +1,43 @@
+:host {
+    width: 60%;
+    height: 100%;
+    mat-card {
+        width: 100%;
+        .days-def {
+            display: flex;
+            mat-card {
+                margin-left: 1rem;
+                display: flex;
+                justify-content: center;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+        .wraper {
+            margin-top: 1rem;
+            .week {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        
+            .day {
+                height: 100%;
+                margin-left: 1rem;
+                padding-bottom: 1.5rem;
+                padding-top: 1.5rem;
+                display: flex;
+                justify-content: center;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+        
+    }
+    
+}

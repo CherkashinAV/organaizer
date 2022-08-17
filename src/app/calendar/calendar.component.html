@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card class="days-def">
+        <mat-card>Sun</mat-card>
+        <mat-card>Mon</mat-card>
+        <mat-card>Tue</mat-card>
+        <mat-card>Wen</mat-card>
+        <mat-card>Thu</mat-card>
+        <mat-card>Fri</mat-card>
+        <mat-card>Sat</mat-card>
+    </mat-card>
+    <mat-card class="wraper">
+        <div class="week" *ngFor="let week of calendar">
+            <mat-card class="day" *ngFor="let day of week.days"> 
+                {{day.value.format('ddd DD')}}
+            </mat-card>
+        </div>
+    </mat-card>
+</mat-card>

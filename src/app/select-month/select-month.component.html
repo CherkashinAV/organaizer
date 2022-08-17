@@ -1,0 +1,13 @@
+
+<mat-card>
+    <button mat-icon-button (click)="changeDate(-1)">
+        <mat-icon>arrow_left</mat-icon>
+    </button>
+    
+    <span>{{this.dateService.date  | async | moment}}</span>
+
+    <button mat-icon-button (click)="changeDate(1)">
+        <mat-icon>arrow_right</mat-icon>
+    </button>
+</mat-card>
+
