@@ -10,8 +10,10 @@
     </mat-card>
     <mat-card class="wraper">
         <div class="week" *ngFor="let week of calendar">
-            <mat-card class="day" *ngFor="let day of week.days"> 
-                {{day.value.format('ddd DD')}}
+            <mat-card class="day" *ngFor="let day of week.days" [class.disabled]="day.disabled" (click)="select(day.value)"> 
+                <span [class.selected]="day.selected" [class.active]="day.active">
+                    {{day.value.format('ddd DD')}}
+                </span>
             </mat-card>
         </div>
     </mat-card>
