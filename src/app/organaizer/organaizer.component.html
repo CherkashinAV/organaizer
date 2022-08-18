@@ -1,1 +1,32 @@
-<p>organaizer works!</p>
+<mat-card class="wraper">
+    <mat-card-title>Tasks for {{date.value.format('DD-MM-YYYY')}}</mat-card-title>
+    <div cdkDropListGroup class="container">
+        <mat-card class="to-do"
+            cdkDropList
+            [cdkDropListData]="toDo"
+            (cdkDropListDropped)="drop($event)">
+            <mat-card class="task" cdkDrag *ngFor="let item of toDo">
+                a
+                <div class="buttons">
+                    <button mat-icon-button>
+                        <mat-icon color="accent">edit</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon color="warn">delete</mat-icon>
+                    </button>
+                </div>
+            </mat-card>
+        </mat-card>
+
+        <mat-card class="done"
+            cdkDropList
+            [cdkDropListData]="done"
+            (cdkDropListDropped)="drop($event)">
+            <mat-card cdkDrag *ngFor="let item of done">
+                b
+            </mat-card>
+        </mat-card>
+    </div>
+    <button mat-raised-button color="primary" (click)="addTask()">Add task</button>
+    
+</mat-card>

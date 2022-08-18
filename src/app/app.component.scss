@@ -1,4 +1,5 @@
 :host {
+    height: 100%;
     app-select-month {
         margin-top: 1rem;
     }
@@ -10,6 +11,18 @@
         justify-content: center;
         .wraper {
             margin-top: 0.5rem;
+            width: 70%;
+            height: 100%;
+        }
+    }
+    .organaizer-wraper {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        height: 25rem;
+        .wraper {
             width: 70%;
             height: 100%;
         }

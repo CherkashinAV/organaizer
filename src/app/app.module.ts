@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MomentPipe } from './shared/moment.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
