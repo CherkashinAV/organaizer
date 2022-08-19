@@ -1,0 +1,17 @@
+<mat-card>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field class="example-form-field" appearance="fill" >
+            <mat-label>Task</mat-label>
+            <input matInput type="text" formControlName="title">
+        </mat-form-field>
+        <div class="buttons">
+            <button mat-raised-button type="submit" [disabled]="form.invalid" color="accent">
+                Submit
+            </button>
+            <button mat-raised-button type="button" (click)="toggleForm()">
+                Close
+            </button>
+        </div>
+    </form>
+   
+</mat-card>

@@ -12,7 +12,13 @@
   </main>
   <div class="organaizer-wraper">
     <div class="wraper">
-      <app-organaizer></app-organaizer>
+      <app-organaizer (btnClick)="toggleForm($event)"></app-organaizer>
     </div>
   </div>
 </div>
+
+<div class="task-form-wraper"  *ngIf="formStatus">
+  <app-task-form (btnClick)="toggleForm($event)"></app-task-form>
+</div>
+<div class="darken"  *ngIf="formStatus"></div>
+

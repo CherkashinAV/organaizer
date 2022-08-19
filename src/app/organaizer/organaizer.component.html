@@ -6,13 +6,21 @@
             [cdkDropListData]="toDo"
             (cdkDropListDropped)="drop($event)">
             <mat-card class="task" cdkDrag *ngFor="let item of toDo">
-                a
+                <p *ngIf="!editable; else edit">{{item.title}}</p>
+                <ng-template #edit>
+                    <form [formGroup]="editForm" (ngSubmit)="submit()">
+                        <mat-form-field class="example-form-field" appearance="fill" >
+                            <mat-label>Task</mat-label>
+                            <input matInput type="text" formControlName="title">
+                        </mat-form-field>
+                    </form>
+                </ng-template>
                 <div class="buttons">
                     <button mat-icon-button>
-                        <mat-icon color="accent">edit</mat-icon>
+                        <mat-icon color="accent" (click)="editTask(item)">edit</mat-icon>
                     </button>
                     <button mat-icon-button>
-                        <mat-icon color="warn">delete</mat-icon>
+                        <mat-icon color="warn" (click)="removeTask(item)">delete</mat-icon>
                     </button>
                 </div>
             </mat-card>
@@ -23,10 +31,10 @@
             [cdkDropListData]="done"
             (cdkDropListDropped)="drop($event)">
             <mat-card cdkDrag *ngFor="let item of done">
-                b
+                {{item.title}}
             </mat-card>
         </mat-card>
     </div>
-    <button mat-raised-button color="primary" (click)="addTask()">Add task</button>
+    <button mat-raised-button color="accent" (click)="addTask()">Add task</button>
     
 </mat-card>

@@ -14,6 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MomentPipe } from './shared/moment.pipe';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TaskFormComponent } from './organaizer/task-form/task-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     OrganaizerComponent,
     SelectMonthComponent,
     MomentPipe,
+    TaskFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +39,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatButtonModule,
     MatGridListModule,
     DragDropModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
